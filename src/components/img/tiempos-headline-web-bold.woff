@@ -1,0 +1,641 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <meta name="robots" content="noindex" />
+    
+    <title></title>
+    <link rel="shortcut icon" href="https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/favicon-32x32.png" />
+    <script src="https://cdn.cedar.com/prod/1.0.23781/js/manage_embedded_app_components.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.cedar.com/prod/1.0.23781/css/patient.bundle.css" />
+
+
+    
+    
+
+    
+    
+
+</head>
+<body class="
+    h-screen flex flex-col bg-gray-fafafa
+">
+<header role="banner">
+    <div class="fixed w-full z-10 hide-if-embedded-in-provider-tools">
+        
+
+
+
+
+
+
+    <div class="w-full z-10 bg-transparent pbu-primary-brand"></div>
+    <div
+        id="navbar-top"
+        class="fixed w-full bg-white border-b border-b-solid border-b-gray-e7e9ef  hide-if-app-embedded"
+        data-test="ds__base-top-navbar"
+    >
+        
+            
+
+
+
+
+
+
+<nav role="navigation" class="chat__page-content m-auto pr-16 max-w-1100 navbar-content" id="navbar-content">
+    <a id="skip-link" class="btn-link align-middle" href="#main-content">skip to main content</a>
+    <div class="w-full flex justify-between" data-test="navbar-header">
+        
+        <div class="float-left flex items-center">
+            <button type="button" name="Menu" class="_nav_sidebar_toggle btn-link float-left mr-0 p-16 border-none s768:hidden" aria-expanded="false">
+                <img class="h-16" alt="Menu" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/hamburger_gray.svg"/>
+            </button>
+            <div class="hidden">&nbsp;</div>
+            
+            
+            
+
+            <a class="btn-link w-full rounded-8 py-16 flex w-184 items-center s768:pl-16 " id="my_bills" href="/">
+                <img class="max-h-40 max-w-184" id="provider_logo_top" alt="Crystal Run Homepage" src="https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/logo.png"/>
+            </a>
+            
+        </div>
+        
+        
+
+
+
+
+
+
+<div class="flex">
+    
+    
+        <div class="_nav_contact_us flex my-auto" title="Contact Us" id="nav-chat">
+            
+        </div>
+    
+    <div class="hidden s768:items-center s768:pl-24 s768:flex">
+        
+        
+            
+
+
+
+
+
+
+    
+    
+    
+    
+
+    
+        <div class="relative" data-test="language-selection-menu">
+            <button class="_nav_language_selector dropdown dropdown-toggle p-4 my-auto font-400 btn-link" aria-haspopup="true" aria-expanded="false" type="button" aria-label="Language selector, currently selected English" data-toggle="dropdown" data-test="language-selection-button">
+                <div class="capitalize flex items-center hover:opacity-50">
+                    <img alt="" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/globe_gray.svg"/>
+                    <span
+                        class="px-8 text-gray-65657b text-0_875"
+                    >
+                        English
+                    </span>
+                    <img alt="" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/solid_caret_down_gray.svg" />
+                </div>
+            </button>
+            <ul class="dropdown-menu float-right bg-white py-16">
+                
+                    <li>
+                        <form action="/set-language/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                            <input type="hidden" name="language" value="en" />
+                            <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                            <input type="submit" tabindex="0" class="text-0_875 s768:text-1 tracking-0_2 leading-1_5 text-left bg-white capitalize px-24 py-8 w-full border-none hover:bg-gray-f3f4f7  text-primary-3667e9 font-500" lang="en" value="English" />
+                        </form>
+                    </li>
+                
+                    <li>
+                        <form action="/set-language/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                            <input type="hidden" name="language" value="es" />
+                            <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                            <input type="submit" tabindex="0" class="text-0_875 s768:text-1 tracking-0_2 leading-1_5 text-left bg-white capitalize px-24 py-8 w-full border-none hover:bg-gray-f3f4f7 text-gray-65657b" lang="es" value="español" />
+                        </form>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+</nav>
+<nav role="navigation" class="navbar-content-mobile" id="navbar-content-mobile" aria-hidden="true">
+    
+
+
+
+
+
+<div id="nav-mobile-overlay" class="_nav_sidebar_toggle nav-mobile__overlay p-0 my-0 hidden ">
+    <img alt="Close the mobile navigation menu" class="pt-32 nav-mobile__close" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/x_black.svg"/>
+</div>
+<div id="mobile-nav-sidebar" class="nav-mobile__sidebar bg-white overflow-auto fixed hidden
+ ">
+    <div tabindex="0" id="mobile-nav-wrapper-first"></div>
+    <div class="px-16 pt-32 pb-8">
+        <a tabindex="-1" class="navbar-top__logo" href="#">
+            <img class="max-h-40 max-w-184" alt="Homepage" src="https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/logo.png"/>
+        </a>
+    </div>
+    <hr class="my-12 border-t border-gray-e7e9ef"/>
+    <ul class="px-16" data-test="navbar-dropdown-content">
+        
+        
+    </ul>
+    <hr class="my-12 border-t border-gray-e7e9ef" />
+    
+    
+        
+
+
+
+
+
+
+    
+    
+    
+    
+
+    
+        <div class="px-16">
+            <h1 class="tracking-0_2 text-0_875 font-500 py-12 text-gray-65657b">Languages</h1>
+            
+                    <form action="/set-language/" method="post" ><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                    <input type="hidden" name="language" value="en" />
+                    <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                    <input tabindex="-1" class="text-1 bg-white list-style-none my-12 capitalize tracking-0_2 leading-1_25 border-none  text-primary-3667e9 font-500" type="submit" value="English" />
+                </form>
+            
+                    <form action="/set-language/" method="post" ><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                    <input type="hidden" name="language" value="es" />
+                    <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                    <input tabindex="-1" class="text-1 bg-white list-style-none my-12 capitalize tracking-0_2 leading-1_25 border-none text-gray-171731" type="submit" value="español" />
+                </form>
+            
+        </div>
+    
+
+
+
+    
+    
+    
+    <div tabindex="0" id="mobile-nav-wrapper-last"></div>
+</div>
+
+</nav>
+
+        
+
+    
+    
+    </div>
+
+
+    </div>
+</header>
+
+
+
+<div class="invisible">
+    
+
+
+
+
+
+
+    <div class="w-full z-10 bg-transparent pbu-primary-brand"></div>
+    <div
+        id="navbar-top-invisible"
+        class=" w-full bg-white border-b border-b-solid border-b-gray-e7e9ef  hide-if-app-embedded"
+        data-test="ds__base-top-navbar"
+    >
+        
+            
+
+
+
+
+
+
+<nav role="navigation" class="chat__page-content m-auto pr-16 max-w-1100 navbar-content" id="navbar-content-invisible">
+    <a id="skip-link-invisible" class="btn-link align-middle" href="#main-content">skip to main content</a>
+    <div class="w-full flex justify-between" data-test="navbar-header">
+        
+        <div class="float-left flex items-center">
+            <button type="button" name="Menu" class="_nav_sidebar_toggle btn-link float-left mr-0 p-16 border-none s768:hidden" aria-expanded="false">
+                <img class="h-16" alt="Menu" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/hamburger_gray.svg"/>
+            </button>
+            <div class="hidden">&nbsp;</div>
+            
+            
+            
+
+            <a class="btn-link w-full rounded-8 py-16 flex w-184 items-center s768:pl-16 " id="my_bills-invisible" href="/">
+                <img class="max-h-40 max-w-184" id="provider_logo_top-invisible" alt="Crystal Run Homepage" src="https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/logo.png"/>
+            </a>
+            
+        </div>
+        
+        
+
+
+
+
+
+
+<div class="flex">
+    
+    
+        <div class="_nav_contact_us flex my-auto" title="Contact Us" id="nav-chat-invisible">
+            
+        </div>
+    
+    <div class="hidden s768:items-center s768:pl-24 s768:flex">
+        
+        
+            
+
+
+
+
+
+
+    
+    
+    
+    
+
+    
+        <div class="relative" data-test="language-selection-menu">
+            <button class="_nav_language_selector dropdown dropdown-toggle p-4 my-auto font-400 btn-link" aria-haspopup="true" aria-expanded="false" type="button" aria-label="Language selector, currently selected English" data-toggle="dropdown" data-test="language-selection-button">
+                <div class="capitalize flex items-center hover:opacity-50">
+                    <img alt="" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/globe_gray.svg"/>
+                    <span
+                        class="px-8 text-gray-65657b text-0_875"
+                    >
+                        English
+                    </span>
+                    <img alt="" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/solid_caret_down_gray.svg" />
+                </div>
+            </button>
+            <ul class="dropdown-menu float-right bg-white py-16">
+                
+                    <li>
+                        <form action="/set-language/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                            <input type="hidden" name="language" value="en" />
+                            <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                            <input type="submit" tabindex="0" class="text-0_875 s768:text-1 tracking-0_2 leading-1_5 text-left bg-white capitalize px-24 py-8 w-full border-none hover:bg-gray-f3f4f7  text-primary-3667e9 font-500" lang="en" value="English" />
+                        </form>
+                    </li>
+                
+                    <li>
+                        <form action="/set-language/" method="post"><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                            <input type="hidden" name="language" value="es" />
+                            <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                            <input type="submit" tabindex="0" class="text-0_875 s768:text-1 tracking-0_2 leading-1_5 text-left bg-white capitalize px-24 py-8 w-full border-none hover:bg-gray-f3f4f7 text-gray-65657b" lang="es" value="español" />
+                        </form>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+</nav>
+<nav role="navigation" class="navbar-content-mobile" id="navbar-content-mobile-invisible" aria-hidden="true">
+    
+
+
+
+
+
+<div id="nav-mobile-overlay-invisible" class="_nav_sidebar_toggle nav-mobile__overlay p-0 my-0 hidden ">
+    <img alt="Close the mobile navigation menu" class="pt-32 nav-mobile__close" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/x_black.svg"/>
+</div>
+<div id="mobile-nav-sidebar-invisible" class="nav-mobile__sidebar bg-white overflow-auto fixed hidden
+ ">
+    <div tabindex="0" id="mobile-nav-wrapper-first"></div>
+    <div class="px-16 pt-32 pb-8">
+        <a tabindex="-1" class="navbar-top__logo" href="#">
+            <img class="max-h-40 max-w-184" alt="Homepage" src="https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/logo.png"/>
+        </a>
+    </div>
+    <hr class="my-12 border-t border-gray-e7e9ef"/>
+    <ul class="px-16" data-test="navbar-dropdown-content">
+        
+        
+    </ul>
+    <hr class="my-12 border-t border-gray-e7e9ef" />
+    
+    
+        
+
+
+
+
+
+
+    
+    
+    
+    
+
+    
+        <div class="px-16">
+            <h1 class="tracking-0_2 text-0_875 font-500 py-12 text-gray-65657b">Languages</h1>
+            
+                    <form action="/set-language/" method="post" ><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                    <input type="hidden" name="language" value="en" />
+                    <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                    <input tabindex="-1" class="text-1 bg-white list-style-none my-12 capitalize tracking-0_2 leading-1_25 border-none  text-primary-3667e9 font-500" type="submit" value="English" />
+                </form>
+            
+                    <form action="/set-language/" method="post" ><input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+                    <input type="hidden" name="language" value="es" />
+                    <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+                    <input tabindex="-1" class="text-1 bg-white list-style-none my-12 capitalize tracking-0_2 leading-1_25 border-none text-gray-171731" type="submit" value="español" />
+                </form>
+            
+        </div>
+    
+
+
+
+    
+    
+    
+    <div tabindex="0" id="mobile-nav-wrapper-last"></div>
+</div>
+
+</nav>
+
+        
+
+    
+    
+    </div>
+
+
+</div>
+
+
+
+
+
+<main role="main" id="main-content" class="flex-1-0-auto bg-gray-fafafa">
+    
+<div class="pt-60 flex-1-0-auto flex flex-col px-24">
+    <div class="text-center max-w-xl self-center">
+        <h2 class="h2 mb-16">
+            
+                Oops, something went wrong
+            
+        </h2>
+        <div>
+            
+                The page you are looking for is not here or an error has occurred. Please check the URL or try again later.
+            
+        </div>
+        <div class="mt-40">
+            
+                <a class="btn btn-primary" href="/">Take me back home</a>
+            
+        </div>
+    </div>
+</div>
+
+</main>
+
+
+
+<footer role="contentinfo" class="flex-shrink-0 z-0 bg-transparent">
+    
+    
+    <div class="m-auto max-w-1100 flex flex-col s768:flex-row s768:justify-between">
+        <div class="ml-32 pt-24 pb-16 items-center s768:m-0 s768:px-24 s768:py-32 s768:flex">
+            <a class="btn-link mr-32 font-300 hide-if-app-embedded" href="http://www.crystalrunhealthcare.com/" data-test="footer-logo-standalone">
+                <img
+                        alt="Crystal Run logo"
+                        class="max-h-30 max-w-184 filter-gray-1"
+                        src="https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/logo.png"
+                />
+            </a>
+            
+            <a class="btn-link mr-32 font-300 hide-if-app-not-embedded" href="" data-test="footer-logo-embedded">
+                <img
+                        alt="Provider business unit logo"
+                        class="max-h-30 max-w-184 filter-gray-1"
+                        src="https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/logo.png"
+                />
+            </a>
+            <ul class="flex flex-wrap text-gray-65657b text-0_875 leading-1_25">
+                <li class="mr-16">
+                    <a
+                        href="http://www.crystalrunhealthcare.com/about-us"
+                        class="underline btn-link font-300 inline-block"
+                    >
+                        About
+                    </a>
+                </li>
+                <li class="mr-16">
+                    
+                    <a
+                            href="http://www.crystalrunhealthcare.com/patient-rights-responsibilities"
+                            class="underline btn-link font-300 inline-block"
+                    >
+                        Terms
+                    </a>
+                    
+                </li>
+                <li class="mr-16">
+                    <a
+                        href="/privacy-policy/"
+                        class="underline btn-link font-300 inline-block"
+                    >
+                        Privacy
+                    </a>
+                </li>
+                
+                
+
+            </ul>
+        </div>
+        <hr class="text-gray-e7e9ef"/>
+        <div class="ml-32 pt-16 pb-24 flex flex-wrap items-center s768:px-24 s768:m-0">
+            
+                
+                    
+
+
+
+
+
+
+    
+    
+    
+    
+
+    <button type="button" class="_nav_language_selector_footer relative btn-link font-400 pt-8 mr-4" data-test="footer-language-selection-menu" aria-expanded="false">
+        <div class="capitalize flex items-center hover:opacity-50" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img alt="" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/globe_gray.svg"/>
+            <span 
+                class="px-8 text-gray-65657b text-0_875"
+                aria-label="Language selection graphic menu English selected"
+            >
+                English
+            </span>
+            <img alt="" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/icons/solid_caret_down_gray.svg" />
+        </div>
+        <div class="dropup-menu bg-white py-16">
+        
+        <form action="/set-language/" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+            <input type="hidden" name="language" value="en" />
+            <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+            <input class="text-left bg-white capitalize px-24 py-8 w-full hover:bg-gray-f3f4f7  text-primary-3667e9 font-500" type="submit" value="English" />
+        </form>
+        
+        <form action="/set-language/" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E">
+            <input type="hidden" name="language" value="es" />
+            <input type="hidden" name="next" value="/assets/images/tiempos-headline-web-bold.woff" />
+            <input class="text-left bg-white capitalize px-24 py-8 w-full hover:bg-gray-f3f4f7 text-gray-65657b" type="submit" value="español" />
+        </form>
+        
+        </div>
+    </button>
+
+                
+                
+
+
+
+
+            
+            
+                <div class="pt-8 flex items-center">
+                    <span class="pr-4 text-gray-65657b text-0_875">
+                        Powered by
+                    </span>
+                    <a href="https://www.cedar.com/" class="btn-link inline-block mb-5">
+                        <img alt="Cedar homepage" src="https://cdn.cedar.com/prod/1.0.23781/css/assets/media/cedar_no_logo.svg"/>
+                    </a>
+                </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+<script type="application/json" id="_server_data_global">
+{
+
+    "chat_logo_url": "https://cdn.cedar.com/prod/1.0.23781/media/providers/pine/favicon-96x96.png",
+    "websocket_url": "wss://pay.crystalrunhealthcare.com/ws-node",
+    "provider_name": "Crystal Run",
+    "provider_short_name": "Crystal Run",
+    "provider_whitelabel_color": "#5EACF3",
+    "formatted_phone_call_inbound": "",
+    "phone_call_inbound": "",
+    "provider_formatted_name": "crystal_run",
+    "provider_id": 3,
+    "provider_business_unit_id": 9,
+    "session_public_id": "b8c13b186da94a3a8b2a5f97d8c23c6d",
+    "logged_in": false,
+    "csrf_token": "DN0l6nkRh5kTkJo4j8MXdfJYEVPHjqm97CTxLqEuz8gotzNE9pnjD0fhGgeHcn4E",
+    "version": "1.0.23781",
+    "static_url": "https://cdn.cedar.com/prod/1.0.23781/",
+    "environment": "prod",
+    "sentry_public_key": "f5b62ed0e42f43d8b29fa98c554382d8",
+    "sentry_project_id": "2",
+    "user_public_id": null,
+    "sentry_user_id": "anon:b8c13b186da94a3a8b2a5f97d8c23c6d",
+    "current_language": "en",
+    "reload_on_auth_change": true,
+    "customer_account_number": null,
+    "guarantor_first_name": null,
+    "guarantor_last_name": null,
+    "auto_refresh_logout_enabled": false
+}
+</script>
+
+    <script id="_global_provider_settings" type="application/json">{"provider_3rd_party_vendor_apps_config": {}}</script>
+
+
+
+
+
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/polyfill.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/sentry.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/event-passive.polyfill.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/maquette.2.4.1.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/maquette.2.4.1.css-transitions.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/jquery.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/jquery.waypoints.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/js/dropdown.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/js/collapse.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/channels/js/websocketbridge.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/date-fns.custom.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/lodash.custom.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/big.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/jsi18n/en/djangojs.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/vendor/js/md5.min.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/js/ds__global.js"></script>
+<script src="https://cdn.cedar.com/prod/1.0.23781/js/patient_app_stats.js"></script>
+
+
+    
+
+
+
+
+
+</body>
+</html>
